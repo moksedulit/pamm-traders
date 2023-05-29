@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+        .content-left.contnet_paragraph ul li::marker {
+            color: #CFD2E5;
+            width: 6px;
+            height: 6px;
+        }
+        button.active{
+            background-color: #363946;
+            color: #fff;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .faq input[type="checkbox"]:checked + label > .faq-arrow {
+            transition: -webkit-transform 0.8s;
+            transition: transform 0.8s;
+            transition: transform 0.8s, -webkit-transform 0.8s;
+            -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        .faq input[type="checkbox"]:checked + label {
+            display: block;
+            background: rgba(255,255,255,255) !important;
+            color: #4f7351;
+            /* height: 195px; */
+            transition: height 0.8s;
+            -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            margin-top: 25px;
+        }
+
+        .faq input[type='checkbox']:not(:checked) + label {
+            display: block;
+            transition: height 0.8s;
+            padding: 25px 0px 58px;
+            -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            height: 35px;
+        }
+
+    }
+  </style>
+</head>
+
+<body class="font-[Manrope]">
+    <div class="container mx-auto 2xl:px-[128px] lx:px-[80px] xl:px-[80px]">
+        <div class="flex items-center">
+            <a class="text-[#B0B0B0] font-normal text-[14px] leading-[26px]" href="#">Главная</a>
+            <img class="w-[16px] h-[22px] ml-[3px]" src="./img/chevron.png" alt="chevron.png">
+            <a class="text-[#B0B0B0] font-normal text-[14px] leading-[26px]" href="#">Трейдерам</a>
+            <img class="w-[16px] h-[22px] ml-[3px]" src="./img/chevron.png" alt="chevron.png">
+            <a class="text-[#B0B0B0] font-normal text-[14px] leading-[26px]" href="#">Текущая страница</a>
+        </div>
+        <!-- <div
+            class="grid 2xl:grid-cols-[79%_20%] lg:grid-cols-[70%_29%] md:grid-cols-[60%_39%] sm:grid-cols-[100%] gap-7"> -->
+            <div class="flex justify-between">
+            <div class="content-left contnet_paragraph w-[953px] mr-[30px]">
+                <h2
+                    class="heading_text mb-[15px] font-semibold	 text-[34px] leading-[45px] flex items-center text-[#363946] mt-[20px]">
+                    Что такое ПАММ-счета</h2>
+                <p class="font-normal  text-sm mt-[15px] text-[#363946] leading-[26px]">Клиенты компании
+                    ИнстаФорекс имеют отличную возможность принимать участие в системе ПАММ-счетов.
+                    ПАММ-система – это услуга по коллективному инвестированию денежных средств на валютном рынке Форекс.
+                </p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">ПАММ-система
+                    (Percentage Allocation Management Module) представляет собой набор специальных торговых
+                    счетов для работы на Форекс, с помощью которых <a href="#"
+                        class="underline decoration-dashed text-[#4982BD]">управляющие
+                        трейдеры</a> распоряжаются своим капиталом и совокупным капиталом <a href="#"
+                        class="underline decoration-dashed text-[#4982BD]">инвесторов</a> (других трейдеров). Суть
+                    работы
+                    ПАММ-системы заключается в возможности трейдера принимать инвестиции от других трейдеров или же
+                    инвестировать собственные средства в чужой торговый счет путем обладания какой-либо долей в нем.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">Таким образом,
+                    инвесторы используют возможности ПАММ-системы с целью получения прибыли от совершенных
+                    управляющими трейдерами сделок.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">Все инвестиции и
+                    переводы в рамках работы ПАММ-системы контролируются компанией ИнстаФорекс в
+                    автоматическом режиме, что гарантирует всем ее участникам безопасность, прозрачность и учет всех
+                    операций внутри системы.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">По своей сути
+                    ПАММ-счет является одной из форм доверительного управления коллективными средствами
+                    ряда трейдеров, где брокер осуществляет долевой учет, обеспечивает одинаковые права всем трейдерам и
+                    позволяет выделить в любой момент времени ту часть общих средств, которая принадлежит каждому из них
+                    в отдельности. По окончании торгового периода прибыль, полученная на ПАММ-счете, пропорционально
+                    распределяется между участниками (инвесторами) ПАММ-счета, а управляющий трейдер получает
+                    оговоренное в договоре вознаграждение за свою деятельность, которое может выражаться в процентном
+                    отношении к общей прибыли за отчетный период торговли.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">ПАММ-счета делятся на
+                    2 типа: ПАММ-счет инвестора и ПАММ-счет управляющего трейдера. ПАММ-счет
+                    инвестора может только переводить средства в счета ПАММ-трейдеров. ПАММ-счет управляющего трейдера
+                    может лишь принимать инвестиции со счетов ПАММ-инвесторов. Каждый клиент компании ИнстаФорекс может
+                    <a href="#" class="underline decoration-dashed text-[#4982BD]">регистрировать</a> неограниченное
+                    количество торговых
+                    счетов, которые могут участвовать в ПАММ-системе в качестве счетов ПАММ-трейдера и ПАММ-инвестора.
+                </p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">Важным свойством
+                    ПАММ-системы является возможность для ПАММ-инвесторов диверсифицировать риски
+                    посредством вложения средств в ПАММ-счета различных управляющих трейдеров.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">Для ПАММ-трейдеров
+                    компания ИнстаФорекс предусмотрела в системе уникальное новшество: прием
+                    инвестиций от различных инвесторов на одном ПАММ-счете, что на данный момент не предлагает ни одна
+                    брокерская компания в мире. Уникальная технология обсчета средств - разработка менеджмента компании
+                    и плод годовой работы программистов.</p>
+                <p class="font-normal  text-sm mt-[10px] text-[#363946] leading-[26px]">Система ПАММ-счетов от
+                    компании ИнстаФорекс на сегодняшний день является лучшей по своим возможностям
+                    для управляющих трейдеров и инвесторов, но работа по улучшению функционала системы ПАММ-счетов не
+                    прекращается ни на секунду, что позволяет нам гарантировать самые высокие стандарты сервиса и
+                    надежности для клиентов ИнстаФорекс.</p>
+            </div>
+            <div class="content-right w-[297px]">
+                <div class="sidebar">
+                    <div class="sidbar_heading mt-[15px]">
+                        <h4
+                            class="sidebar_heading font-medium  text-[16px] leading-[24px] float-left text-[#363946]">
+                            Мониторинг ПАММ</h4>
+                        <a class="flex text-[14px] font-normal justify-end leading-[22px] text-[#1E7BE2]" href="#">См.
+                            всех <img class="w-[16px] h-[22px]" src="./img/chevron-g.png" alt="chevron-g.png"></a>
+                    </div>
+                    <!-- component -->
+                    <!-- This is an tailmater component -->
+                    <div>
+                        <div class='w-full 2xl:max-w-lg pt-[15px] mx-auto'>
+                            <div class='2xl:max-w-md mx-auto space-y-6'>
+
+                                <div class="flex flex-col mb-6">
+                                    <div class="flex flex-col gap-4">
+
+                                        <!-- tabs -->
+                                        <div class="tabs flex flex-col w-full">
+                                            <!-- tabs header -->
+                                            <div class="relative flex flex-row items-center">
+                                                <button data-type="tabs" data-target="#tab-1"
+                                                    class="active active:bg-[#363946] w-1/3 px-[12px] flex flex-col items-center gap-1 relative rounded-md pt-[5px] pb-[7px] text-[#878991]">
+                                                    <p class="text-[12px] font-normal leading-[17px]">PAMM</p>
+                                                </button>
+                                                <button data-type="tabs" data-target="#tab-2"
+                                                    class="w-1/3 px-[12px] flex flex-col items-center gap-1 relative mx-[7px] rounded-md pt-[5px] pb-[7px] bg-[#F5F7FA] text-[#878991]">
+                                                    <p class="text-[12px] font-normal leading-[17px]">InstaCopy</p>
+                                                </button>
+                                                <button data-type="tabs" data-target="#tab-3"
+                                                    class="w-1/3 px-[12px] flex flex-col items-center gap-1 relative rounded-md pt-[5px] pb-[7px] bg-[#F5F7FA] text-[#878991]">
+                                                    <p class="text-[12px] font-normal leading-[17px]">Портфели</p>
+                                                </button>
+
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <div id="tab-1" role="tabpanel"
+                                                    class="active [&amp;.active]:block hidden transition duration-400 ease-in-out">
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  mt-[10px] border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                Golden Bridge 30</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]"> $
+                                                                    412 547</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                AragornTrade</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">
+                                                                        $ 72 812</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                JB 1990</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]"> $ 18 093</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                CowBoyCat</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">$ 9 882</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                AlanWake</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">  $ 28 001</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                AragornTrade</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">  $ 72 812</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                JB 1990</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">  $ 18 093</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                CowBoyCat</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">  $ 9 882</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex justify-between items-center mb-[5px]  border-solid border-[1px] border-[#E9F0F7] rounded-lg p-[15px] mt-[5px]">
+                                                        <div class="tab_side_left">
+                                                            <h5
+                                                                class="font-normal  text-sm leading-[22px] text-[#1E7BE2]">
+                                                                AlanWake</h5>
+                                                            <p
+                                                                class="font-normal  text-xs leading-[15px] text-[#878991] mt-[5px]">
+                                                                Всего прибыли <span class="ml-[5px] text-[#363946]">  $ 28 001</span></p>
+                                                        </div>
+                                                        <div
+                                                            class="bg-[#676CEF] rounded-[50px] w-[18px] h-[18px] text-center text-[10px] font-normal leading-[15px] text-white">
+                                                            p
+                                                        </div>
+                                                    </div>
+                                                    <a class="flex text-[14px] font-normal justify-center leading-[22px] text-[#1E7BE2] mt-[15px]"
+                                                        href="#">Еще 2 771 счетов <img class="w-[16px] h-[22px]"
+                                                            src="./img/chevron-g.png" alt="chevron-g.png"></a>
+                                                </div>
+                                                <div id="tab-2" role="tabpanel"
+                                                    class="[&amp;.active]:block hidden py-4 transition duration-400 ease-in-out">
+                                                    <h3>Tabs content 2</h3>
+                                                </div>
+                                                <div id="tab-3" role="tabpanel"
+                                                    class="[&amp;.active]:block hidden py-4 transition duration-400 ease-in-out">
+                                                    <h3>Tabs content 3</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#E9F0F7] h-[1px] w-full mt-[40px] mb-[30px]"></div>
+        <a class=" rounded-md font-normal  text-sm leading-[26px] text-center text-white	inline-flex bg-[#1E7BE2] px-[40px] pt-[10px] pb-[12px]"
+            href="">Открыть ПАММ-счет</a>
+    </div>
+    <div class="container mx-auto 2xl:px-[148px] xl:px-[148px]">
+        <div class="faq-containers flex justify-between mt-[100px]">
+            <h4 class=" font-medium text-[22px] leading-[30px] flex items-center text-[#363946]">Часто
+                задаваемые вопросы</h4>
+            <a class="flex text-[14px] font-normal items-center leading-[22px] text-[#1E7BE2]" href="#">Смотреть все<img
+                    class="w-[16px] h-[22px]" src="./img/chevron-g.png" alt="chevron-g.png"></a>
+        </div>
+        <div class='faq ml-[7px]'>
+            <input id='faq-a' class="hidden" type='checkbox'>
+            <label class="relative overflow-hidden cursor-pointer" for='faq-a'>
+                <p
+                    class="faq-heading font-medium  pl-[20px] 2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-0 text-[16px] leading-[29px] text-[#363946] 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[18px] ml-[26px]">
+                    Я ПАММ трейдер, почему мой баланс не увеличился после принятия новой инвестиции?</p>
+                <div
+                    class='faq-arrow w-[8px] h-[8px] transition-transform border-solid border-t-[2px] border-r-[2px] border-[#4982BD] float-left relative top-[-48px] left-[0px] rotate-[135deg] 2xl:top-[-20px] xl:top-[-20px] lg:top-[-20px] md:top-[-20px] 2xl:left-0 xl:left-0 lg:left-0 md:left-0'>
+                </div>
+                <p
+                    class="faq-text w-[95%] pl-[20px] pt-[10px] 2xl:py-[22px] xl:py-[22px] lg:py-[22px] md:py-[22px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[16px] 2xl:leading-[26px] xl:leading-[26px] lg:leading-[26px] md:leading-[26px] text-[#363946] text-sm leading-[22px] font-normal">
+                    Да, вы можете копировать как все сделки, так и сделки по определённым инструментам с заранее
+                    выставленным соотношением копируемых лотов</p>
+            </label>
+            <div
+                class="w-[98%] h-[1px] bg-[#E9F0F7] 2xl:ml-[20px] xl:ml-[20px] lg:ml-[20px] md:ml-[20px] mt-[20px] mt-[20px] 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+            </div>
+            <input id='faq-b' class="hidden" type='checkbox'>
+            <label class="relative overflow-hidden cursor-pointer" for='faq-b'>
+                <p
+                    class="faq-heading font-medium  pl-[20px] 2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-0 text-[16px] leading-[29px] text-[#363946] 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[18px] ml-[26px]">
+                    Может ли ПАММ-трейдер снять мои инвестированные средства?</p>
+                <div
+                    class='faq-arrow w-[8px] h-[8px] transition-transform border-solid border-t-[2px] border-r-[2px] border-[#4982BD] float-left relative top-[-48px] left-[0px] rotate-[135deg] 2xl:top-[-20px] xl:top-[-20px] lg:top-[-20px] md:top-[-20px] 2xl:left-0 xl:left-0 lg:left-0 md:left-0'>
+                </div>
+                <p
+                    class="faq-text w-[95%] pl-[20px] pt-[10px] 2xl:py-[22px] xl:py-[22px] lg:py-[22px] md:py-[22px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[16px] 2xl:leading-[26px] xl:leading-[26px] lg:leading-[26px] md:leading-[26px] text-[#363946] text-sm leading-[22px] font-normal">
+                    faq 2</p>
+            </label>
+            <div
+                class="w-[98%] h-[1px] bg-[#E9F0F7] 2xl:ml-[20px] xl:ml-[20px] lg:ml-[20px] md:ml-[20px] mt-[20px] 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+            </div>
+            <input id='faq-c' class="hidden" type='checkbox'>
+            <label class="relative overflow-hidden cursor-pointer border-solid" for='faq-c'>
+                <p
+                    class="faq-heading font-medium  pl-[20px] 2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-0 text-[16px] leading-[29px] text-[#363946] 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[18px] ml-[26px]">
+                    Можно ли зарегистрировать партнерский счет в ПАММ системе?</p>
+                <div
+                    class='faq-arrow w-[8px] h-[8px] transition-transform border-solid border-t-[2px] border-r-[2px] border-[#4982BD] float-left relative top-[-48px] left-[0px] rotate-[135deg] 2xl:top-[-20px] xl:top-[-20px] lg:top-[-20px] md:top-[-20px] 2xl:left-0 xl:left-0 lg:left-0 md:left-0'>
+                </div>
+                <p
+                    class="faq-text w-[95%] pl-[20px] pt-[10px] 2xl:py-[22px] xl:py-[22px] lg:py-[22px] md:py-[22px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[16px] 2xl:leading-[26px] xl:leading-[26px] lg:leading-[26px] md:leading-[26px] text-[#363946] text-sm leading-[22px] font-normal">
+                    faq 3</p>
+            </label>
+            <div
+                class="w-[98%] h-[1px] bg-[#E9F0F7] 2xl:ml-[20px] xl:ml-[20px] lg:ml-[20px] md:ml-[20px] mt-[20px] 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+            </div>
+            <input id='faq-d' class="hidden" type='checkbox'>
+            <label class="relative overflow-hidden cursor-pointer" for='faq-d'>
+                <p
+                    class="faq-heading font-medium  pl-[20px] 2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-0 text-[16px] leading-[29px] text-[#363946] 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[18px] ml-[26px]">
+                    Я ПАММ инвестор, одобрил заявку на инвестирование. <br> Что значит статус заявки "ожидает
+                    синхронизации"?</p>
+                <div
+                    class='faq-arrow w-[8px] h-[8px] transition-transform border-solid border-t-[2px] border-r-[2px] border-[#4982BD] float-left relative top-[-48px] left-[0px] rotate-[135deg] 2xl:top-[-30px] xl:top-[-20px] lg:top-[-20px] md:top-[-20px] 2xl:left-0 xl:left-0 lg:left-0 md:left-0'>
+                </div>
+                <p
+                    class="faq-text w-[95%] pl-[20px] pt-[10px] 2xl:py-[22px] xl:py-[22px] lg:py-[22px] md:py-[22px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[16px] 2xl:leading-[26px] xl:leading-[26px] lg:leading-[26px] md:leading-[26px] text-[#363946] text-sm leading-[22px] font-normal">
+                    faq 4</p>
+            </label>
+            <div
+                class="w-[98%] h-[1px] bg-[#E9F0F7] 2xl:ml-[20px] xl:ml-[20px] lg:ml-[20px] md:ml-[20px] md:ml-[30px] mt-[20px] 2xl:mt-[25px] xl:[25px] lg:[25px] md:[25px]">
+            </div>
+            <input id='faq-e' class="hidden" type='checkbox'>
+            <label class="relative overflow-hidden cursor-pointer" for='faq-e'>
+                <p
+                    class="faq-heading font-medium  pl-[20px] 2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-0 text-[16px] leading-[29px] text-[#363946] 2xl:text-[18px] xl:text-[18px] lg:text-[18px] md:text-[18px] ml-[26px]">
+                    Может ли ПАММ-трейдер снять мои инвестированные средства?</p>
+                <div
+                    class='faq-arrow w-[8px] h-[8px] transition-transform border-solid border-t-[2px] border-r-[2px] border-[#4982BD] float-left relative top-[-48px] left-[0px] rotate-[135deg] 2xl:top-[-20px] xl:top-[-20px] lg:top-[-20px] md:top-[-20px] 2xl:left-0 xl:left-0 lg:left-0 md:left-0'>
+                </div>
+                <p
+                    class="faq-text w-[95%] pl-[20px] pt-[10px] 2xl:py-[22px] xl:py-[22px] lg:py-[22px] md:py-[22px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[16px] 2xl:leading-[26px] xl:leading-[26px] lg:leading-[26px] md:leading-[26px] text-[#363946] text-sm leading-[22px] font-normal">
+                    faq 5</p>
+            </label>
+            <div
+                class="w-[98%] h-[1px] bg-[#E9F0F7] 2xl:ml-[20px] xl:ml-[20px] lg:ml-[20px] md:ml-[20px] mt-[20px] 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabs_func = function () {
+            const set_tabs = document.querySelectorAll('[data-type="tabs"]');
+            const tabIndicator = document.querySelectorAll('[role="indicator"]');
+
+            if (set_tabs != null) {
+                function TabClicks(tabClickEvent) {
+                    const clickTarget = tabClickEvent.currentTarget;
+                    const tabParent = tabClickEvent.currentTarget.parentNode.parentNode;
+                    const set_tabs = tabParent.querySelectorAll('[data-type="tabs"]');
+                    const tabIndicator = tabParent.querySelectorAll('[role="indicator"]');
+                    const w_set = clickTarget.offsetWidth;
+
+                    for (let i = 0; i < set_tabs.length; i++) {
+                        set_tabs[i].classList.remove("active");
+
+                        for (let j = 0; j < tabIndicator.length; j++) {
+                            if (clickTarget === set_tabs[i]) {
+                                tabIndicator[j].style.left = w_set * i + 'px';
+                            }
+                        }
+                    }
+                    clickTarget.classList.add("active");
+
+                    // content
+                    tabClickEvent.preventDefault();
+                    const isTab = tabParent.querySelectorAll('[role="tabpanel"]');
+                    for (let i = 0; i < isTab.length; i++) {
+                        isTab[i].classList.remove("active");
+                    }
+                    const activePaneId = clickTarget.getAttribute("data-target");
+                    const activePane = tabParent.querySelector(activePaneId);
+                    activePane.classList.add("active");
+                }
+
+                for (let i = 0; i < set_tabs.length; i++) {
+                    set_tabs[i].addEventListener("click", TabClicks);
+                }
+            }
+        };
+        tabs_func();
+    </script>
+</body>
+
+</html>
